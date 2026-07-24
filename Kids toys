@@ -1,0 +1,45 @@
+using System;
+public class KidsToys
+{
+    public static void Main(string[] args)
+    {
+        double puzzel = 2.60;
+        double doll = 3.00;
+        double bear = 4.10;
+        double minion = 8.20;
+        double truck = 2.00;
+        
+        int count = 0;
+
+        double priceVacation = double.Parse(Console.ReadLine());
+        int puzzelsCount = int.Parse(Console.ReadLine());
+        int dollsCount = int.Parse(Console.ReadLine());
+        int bearsCount = int.Parse(Console.ReadLine());
+        int minionsCount = int.Parse(Console.ReadLine());
+        int trucksCount = int.Parse(Console.ReadLine());
+
+
+        double sum = puzzelsCount*puzzel + dollsCount*doll + bearsCount*bear + minionsCount*minion + trucksCount*truck;
+        int toys = puzzelsCount + dollsCount + bearsCount + minionsCount + trucksCount;
+        double discount = 0;
+        if (toys > 50) 
+        {
+            discount = sum * 0.25;
+            sum -= discount;
+        }
+        
+        double rent = sum * 0.1;
+        double winPrice = sum - rent;
+
+        if (winPrice >= priceVacation)
+        {
+            double leftMoney = winPrice - priceVacation;
+            Console.WriteLine($"Yes! {leftMoney} lv left.");
+        }
+        else
+        {
+            double notENoughMoney = priceVacation - winPrice;
+            Console.WriteLine($"Not enough money! {notENoughMoney} lv needed.");
+        }
+    }
+}
