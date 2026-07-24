@@ -1,0 +1,35 @@
+using System;
+public class CinemaTickets
+{
+    public static void Main(string[] args)
+    {
+        double premiereTicket = 12.00;
+        double normalTicket = 7.50;
+        double discountTicket = 5.00;
+
+        string typeProjection = Console.ReadLine();
+        int row = int.Parse(Console.ReadLine());
+        int column = int.Parse(Console.ReadLine());
+
+        double income = 0.0;
+
+        if (typeProjection == "Premiere")
+        {
+            income = premiereTicket * row * column;
+        }
+        else if (typeProjection == "Normal")
+        {
+            income = normalTicket * row * column;
+        }
+        else if (typeProjection == "Discount")
+        {
+            income = discountTicket * row * column;
+        }
+        else 
+        {
+            Console.WriteLine("No valid ticket. Try again.");
+        }
+
+        Console.WriteLine($"Income: {income} leva.");
+    }
+}
