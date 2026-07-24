@@ -1,0 +1,24 @@
+using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        double pens = 5.80;
+        double markers = 7.20;
+        double preparat = 1.20;
+
+        double penPack = int.Parse(Console.ReadLine());
+        double markersPack = int.Parse(Console.ReadLine());
+        double literPrep = int.Parse(Console.ReadLine());
+        double discount = int.Parse(Console.ReadLine());
+
+        double penSum = penPack * pens;
+        double markerSum = markers * markersPack;
+        double preparatSum = preparat * literPrep;
+        double materials = penSum + markerSum + preparatSum;
+        discount = discount * 0.01;
+        double sumDiscount = materials - (materials * discount);
+
+        Console.WriteLine("Sum after discount: " + sumDiscount);
+    }
+}
