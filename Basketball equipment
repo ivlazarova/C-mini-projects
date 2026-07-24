@@ -1,0 +1,16 @@
+using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int tax = int.Parse(Console.ReadLine());
+
+        double shoes = tax - 0.4 * tax;
+        double ekip = shoes - 0.2 * shoes;
+        double ball = 0.25 * ekip;
+        double accessories = 0.2 * ball;
+
+        double total = tax + shoes + ekip + ball + accessories;
+        Console.WriteLine("Total sum for the equipment is: " + total + " lv");
+    }
+}
