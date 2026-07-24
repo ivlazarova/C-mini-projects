@@ -1,0 +1,24 @@
+using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        double nailon = 1.50;
+        double paint = 14.50;
+        double razredPaint = 5.00;
+
+        int needNailon = int.Parse(Console.ReadLine());
+        int needPaint = int.Parse(Console.ReadLine());
+        int needRazredPaint = int.Parse(Console.ReadLine());
+        int hours = int.Parse(Console.ReadLine());
+
+        double nailonSum = (needNailon + 2) * nailon;
+        double paintSum = (needPaint + (needPaint * 0.1)) * paint;
+        double razredPaintSum = needRazredPaint * razredPaint;
+        double bag = 0.40;
+        double materialSum = nailonSum + paintSum + razredPaintSum + bag;
+        double masterSum = (materialSum * 0.3) * hours;
+        double sum = materialSum + masterSum;
+        Console.WriteLine(sum);
+    }
+}
