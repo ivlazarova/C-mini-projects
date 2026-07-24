@@ -1,0 +1,36 @@
+using System;
+public class WorkDay
+{
+    public static void Main(string[] args)
+    {
+        string day = Console.ReadLine();
+
+        switch (day)
+        {
+            case "Monday":
+                Console.WriteLine("Today is work day.");
+                break;
+            case "Tuesday":
+                Console.WriteLine("Today is work day.");
+                break;
+            case "Wednesday":
+                Console.WriteLine("Today is work day.");
+                break;
+            case "Thursday":
+                Console.WriteLine("Today is work day.");
+                break;
+            case "Friday":
+                Console.WriteLine("Today is work day.");
+                break;
+            case "Saturday":
+                Console.WriteLine("Today is weekend.");
+                break;
+            case "Sunday":
+                Console.WriteLine("Today is weekend.");
+                break;
+            default:
+                Console.WriteLine("Invalid day. Try again.");
+                break;
+        }
+    }
+}
