@@ -1,0 +1,24 @@
+using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        double chikenMenu = 10.35;
+        double fishMenu = 12.40;
+        double vegetarianMenu = 8.15;
+
+        int chiken = int.Parse(Console.ReadLine());
+        int fish = int.Parse(Console.ReadLine());
+        int vegetarian = int.Parse(Console.ReadLine());
+
+        double chikenPrice = chiken * chikenMenu;
+        double fishPrice = fish * fishMenu;
+        double vegetarianPrice = vegetarian * vegetarianMenu;
+
+        double sum = chikenPrice + fishPrice + vegetarianPrice;
+        double desert = sum * 0.2;
+        double delivery = 2.50;
+        double total = sum + desert + delivery;
+        Console.WriteLine("Total sum: " + total + " lv");
+    }
+}
