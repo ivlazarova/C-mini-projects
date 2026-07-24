@@ -1,0 +1,38 @@
+using System;
+using System.IO.Pipelines;
+public class AreaForms
+{
+    public static void Main(string[] args)
+    {
+        string form = Console.ReadLine();
+
+        if (form == "Square") {
+            double a = double.Parse(Console.ReadLine());
+            double area = a * a;
+            Console.WriteLine("The area of the square is: " + area);
+        }
+        else if (form == "Rectangle") {
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double area = a * b;
+            Console.WriteLine("The area of the rectangle is: " + area);
+        }
+        else if (form == "Circle")
+        {
+            double r = double.Parse(Console.ReadLine());
+            double area = Math.PI * r * r;
+            Console.WriteLine("The area of the circle is: " + area);
+        }
+        else if (form == "Triangle") 
+        {
+            double a = double.Parse(Console.ReadLine());
+            double b = double.Parse(Console.ReadLine());
+            double area = 0.5 * a * b;
+            Console.WriteLine("The area of the triangle is: " + area);
+        }
+        else 
+        {
+            Console.WriteLine("Invalid form");
+        }
+    }
+}
