@@ -1,0 +1,18 @@
+using System;
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int length = int.Parse(Console.ReadLine());
+        int width = int.Parse(Console.ReadLine());
+        int height = int.Parse(Console.ReadLine());
+        int percent = int.Parse(Console.ReadLine());
+
+        int volume = length * width * height;
+        double volumeLitre = volume * 0.001;
+        double takenSpace = percent * 0.01;
+        double neededLitre = volumeLitre * (1 - takenSpace);
+
+        Console.WriteLine("Needed liters: " + neededLitre + " liters");
+    }
+}
